@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography */
+h1 {
+  @apply font-serif text-4xl md:text-6xl font-bold tracking-tight;
+}
+
+h2 {
+  @apply font-serif text-3xl md:text-5xl font-bold tracking-tight;
+}
+
+h3 {
+  @apply font-serif text-2xl md:text-3xl font-bold;
+}
+
+p {
+  @apply text-base md:text-lg leading-relaxed;
+}
+
+/* Buttons */
+.btn-primary {
+  @apply px-8 py-3 bg-chronicls-black text-chronicls-white hover:bg-chronicls-cream hover:text-chronicls-black transition-all duration-300 ease-in-out font-medium uppercase tracking-wider;
+}
+
+.btn-secondary {
+  @apply px-8 py-3 border-2 border-chronicls-black text-chronicls-black hover:bg-chronicls-black hover:text-chronicls-white transition-all duration-300 ease-in-out font-medium uppercase tracking-wider;
+}
+
+.btn-outline {
+  @apply px-8 py-3 border border-chronicls-black text-chronicls-black hover:bg-chronicls-black hover:text-chronicls-white transition-all duration-300;
+}
+
+/* Links */
+a {
+  @apply transition-colors duration-300;
+}
+
+/* Images */
+img {
+  @apply max-w-full h-auto;
+}
+
+/* Section Spacing */
+.section-container {
+  @apply max-w-7xl mx-auto px-4 py-16 md:py-24;
+}
+
+.section-title {
+  @apply text-center mb-12 md:mb-16;
+}
+
+/* Luxury spacing and design */
+.luxury-divider {
+  @apply h-px bg-chronicls-black my-12;
+}
+
+.cream-bg {
+  @apply bg-chronicls-cream;
+}
+
+.accent-text {
+  @apply text-chronicls-accent;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
